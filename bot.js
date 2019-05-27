@@ -1,4 +1,4 @@
-﻿const Discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
 const developers = ['556589439258722336'];
 
@@ -29,17 +29,6 @@ if (message.content.startsWith('.st')) {
    message.channel.send(` ** ${argresult} \ ** `)
 }
 });
-
-client.on('message', message => {
-        if (!developers.includes(message.author.id)) return;
-  if (message.content === '0..') {
-  let channel = client.channels.get('579416111922151426');
-
-  channel.join()
-  .then(connection => console.log('Connected'))
-  .catch(console.error);
-    
-  }
           
 });
 client.login(process.env.BOT_TOKEN);
